@@ -13,6 +13,9 @@ import {
 const JobDetailPage = () => {
   const navigate = useNavigate();
   const { jobId } = useParams();
+  const handleBackToAllJobs = () => {
+    navigate("/all-jobs"); // or "/blog" depending on your route
+  };
   // Sample job data (normally would come from props or API)
   const jobData = {
     id: jobId || 1,
@@ -93,7 +96,7 @@ What We Offer:
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Button */}
         <button
-          onClick={handleBackClick}
+          onClick={handleBackToAllJobs}
           className="flex items-center gap-2 text-gray-600 hover:text-pink-600 mb-8 transition-colors group"
         >
           <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
@@ -113,22 +116,22 @@ What We Offer:
                 {/* Job Meta Information */}
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center gap-3 text-gray-600">
-                    <MapPin className="w-5 h-5 text-pink-600" />
+                    <MapPin className="w-5 h-5 text-pink-700" />
                     <span className="font-medium">Location:</span>
                     <span>{jobData.location}</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-600">
-                    <Calendar className="w-5 h-5 text-pink-600" />
+                    <Calendar className="w-5 h-5 text-pink-700" />
                     <span className="font-medium">Posted:</span>
                     <span>{jobData.postedDate}</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-600">
-                    <Briefcase className="w-5 h-5 text-pink-600" />
+                    <Briefcase className="w-5 h-5 text-pink-700" />
                     <span className="font-medium">Department:</span>
                     <span>{jobData.department}</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-600">
-                    <Clock className="w-5 h-5 text-pink-600" />
+                    <Clock className="w-5 h-5 text-pink-700" />
                     <span className="font-medium">Type:</span>
                     <span>{jobData.type}</span>
                   </div>
@@ -136,13 +139,13 @@ What We Offer:
 
                 {/* Job Tags */}
                 <div className="flex flex-wrap gap-3 mb-8">
-                  <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+                  <span className="bg-[#F9F3E4] text-pink-700 px-4 py-2 rounded-full text-sm font-medium">
                     {jobData.department}
                   </span>
-                  <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+                  <span className="bg-[#F9F3E4] text-pink-700 px-4 py-2 rounded-full text-sm font-medium">
                     {jobData.type}
                   </span>
-                  <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
+                  <span className="bg-[#F9F3E4] text-pink-700 px-4 py-2 rounded-full text-sm font-medium">
                     {jobData.experience}
                   </span>
                 </div>
@@ -222,7 +225,7 @@ What We Offer:
 
               <button
                 onClick={handleApplyClick}
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg mb-4"
+                className="w-full bg-[#CD8855] text-white py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg mb-4"
               >
                 Apply Now
               </button>

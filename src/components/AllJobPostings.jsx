@@ -203,7 +203,7 @@ const AllJobsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 py-20 text-white">
+      <section className="bg-gradient-to-r from-pink-800 via-pink-700 to-pink-800 py-20 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -218,10 +218,7 @@ const AllJobsPage = () => {
                 <Briefcase className="w-5 h-5" />
                 <span>{allJobsData.length} Open Positions</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
-                <span>Multiple Locations</span>
-              </div>
+
               <div className="flex items-center space-x-2">
                 <Users className="w-5 h-5" />
                 <span>Growing Team</span>
@@ -246,7 +243,7 @@ const AllJobsPage = () => {
                 <Search className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Search jobs, skills, location..."
+                  placeholder="Search jobs, skills..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
@@ -280,17 +277,6 @@ const AllJobsPage = () => {
               </select>
 
               {/* Location Filter */}
-              <select
-                value={selectedLocation}
-                onChange={(e) => setSelectedLocation(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-              >
-                {locations.map((location) => (
-                  <option key={location} value={location}>
-                    {location}
-                  </option>
-                ))}
-              </select>
             </div>
 
             <div className="mt-6 flex justify-between items-center">
@@ -301,10 +287,10 @@ const AllJobsPage = () => {
                 </span>{" "}
                 of {allJobsData.length} jobs
               </div>
-              <button className="text-pink-600 hover:text-pink-700 font-medium flex items-center">
+              {/*<button className="text-pink-600 hover:text-pink-700 font-medium flex items-center">
                 <Filter className="w-4 h-4 mr-1" />
                 Advanced Filters
-              </button>
+              </button>*/}
             </div>
           </div>
         </div>
@@ -319,12 +305,6 @@ const AllJobsPage = () => {
                 key={job.id}
                 className="bg-white rounded-2xl shadow-sm border hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden"
               >
-                {job.urgent && (
-                  <div className="absolute top-0 right-0 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-1 text-sm font-semibold">
-                    Urgent Hiring
-                  </div>
-                )}
-
                 <div className="p-8">
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
@@ -332,11 +312,6 @@ const AllJobsPage = () => {
                         <h3 className="text-2xl font-bold text-gray-900 mr-4">
                           {job.title}
                         </h3>
-                        {job.urgent && (
-                          <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">
-                            Hot Job
-                          </span>
-                        )}
                       </div>
 
                       <p className="text-gray-600 mb-4 leading-relaxed">
@@ -348,10 +323,7 @@ const AllJobsPage = () => {
                           <Calendar className="w-4 h-4" />
                           Posted: {job.postedDate}
                         </span>
-                        <span className="flex items-center gap-2 text-gray-600 bg-gray-50 px-3 py-2 rounded-full text-sm">
-                          <MapPin className="w-4 h-4" />
-                          {job.location}
-                        </span>
+
                         <span className="flex items-center gap-2 text-gray-600 bg-gray-50 px-3 py-2 rounded-full text-sm">
                           <Clock className="w-4 h-4" />
                           {job.experience}
@@ -359,13 +331,13 @@ const AllJobsPage = () => {
                       </div>
 
                       <div className="flex flex-wrap gap-3">
-                        <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+                        <span className="bg-[#F9F3E4] text-pink-800 px-4 py-2 rounded-full text-sm font-medium">
                           {job.department}
                         </span>
-                        <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+                        <span className="bg-[#F9F3E4] text-pink-800 px-4 py-2 rounded-full text-sm font-medium">
                           {job.type}
                         </span>
-                        <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
+                        <span className="bg-[#F9F3E4] text-pink-800 px-4 py-2 rounded-full text-sm font-medium">
                           {job.salary}
                         </span>
                       </div>
@@ -374,11 +346,11 @@ const AllJobsPage = () => {
                     <div className="ml-6 flex flex-col space-y-3">
                       <button
                         onClick={() => handleJobClick(job.id)}
-                        className="bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-all duration-300 flex items-center gap-2 shadow-lg transform hover:scale-105"
+                        className="bg-[#CD8855] text-white px-7 py-3 rounded-lg font-semibold hover:bg-[#B6794C] transition-all duration-300 flex items-center gap-2 shadow-lg transform hover:scale-105"
                       >
                         View Details <ChevronRight className="w-4 h-4" />
                       </button>
-                      <button className="border-2 border-pink-600 text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-pink-600 hover:text-white transition-all duration-300">
+                      <button className="border-2 border-[#CD8855] text-[#CD8855] px-6 py-3 rounded-lg font-semibold hover:bg-[#CD8855] hover:text-white transition-all duration-300">
                         Quick Apply
                       </button>
                     </div>
@@ -416,7 +388,7 @@ const AllJobsPage = () => {
         </div>
       </section>
 
-      {/* Why Join Us Section */}
+      {/* Why Join Us Section 
       <section className="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -480,7 +452,7 @@ const AllJobsPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Application Process */}
       <section className="py-20 bg-white">
@@ -519,7 +491,7 @@ const AllJobsPage = () => {
               },
             ].map((process, index) => (
               <div key={index} className="text-center relative">
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#D19D9C] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-lg">
                     {process.step}
                   </span>
@@ -538,7 +510,7 @@ const AllJobsPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-[#D19D9C]to-purple-600 text-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Start Your Journey?
@@ -551,9 +523,9 @@ const AllJobsPage = () => {
             <button className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
               Submit General Application
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-all duration-300">
+            {/*<button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-all duration-300">
               Join Talent Network
-            </button>
+            </button>*/}
           </div>
         </div>
       </section>

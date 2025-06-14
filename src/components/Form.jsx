@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
   Upload,
@@ -36,7 +37,7 @@ const Form = () => {
   };
 
   const handleBackClick = () => {
-    alert("Navigate back to job detail page");
+    navigate("/all-jobs"); // or "/blog" depending on your route
   };
 
   const handleSubmit = () => {
