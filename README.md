@@ -1,12 +1,51 @@
-# React + Vite
+# Pristino Pharma
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast and responsive web application for **RYA Bakes**, built using **Vite + React**. It features dynamic blogs with full article view, beautiful navigation, image galleries, and structured pages such as Careers, OTC, Gynac, and more.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- ⚛️ React (via Vite)
+- 🌐 React Router DOM
+- 🎨 Tailwind CSS
+- 🖼️ Static Assets via `public/`
+- ⚡ Vite for fast development build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📦 Getting Started
+
+These instructions will help you set up the project locally.
+
+### ✅ Prerequisites
+
+Make sure you have these installed:
+
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+---
+
+### ⚙️ Installation
+
+1. **Clone the project:**
+
+```bash
+git clone https://github.com/GhaniBR/PristinoPharma.git
+cd PristinoPharma
+````
+
+2. **Install dependencies:**
+
+```bash
+npm install
+```
+
+3. **Run the development server:**
+
+```bash
+npm run dev
+```
+
+Open your browser and navigate to: [http://localhost:5173](http://localhost:5173)
