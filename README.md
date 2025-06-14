@@ -1,6 +1,6 @@
 # Pristino Pharma
 
-A fast and responsive web application for **RYA Bakes**, built using **Vite + React**. It features dynamic blogs with full article view, beautiful navigation, image galleries, and structured pages such as Careers, OTC, Gynac, and more.
+A fast and responsive web application, built using **Vite + React**. It features dynamic blogs with full article view, beautiful navigation, image galleries, and structured pages such as Careers, OTC, Gynac, and more.
 
 ---
 
