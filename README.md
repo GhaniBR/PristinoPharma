@@ -32,7 +32,7 @@ Make sure you have these installed:
 1. **Clone the project:**
 
 ```bash
-git clone https://github.com/yourusername/rya-bakes.git
+git clone https://github.com/GhaniBR/PristinoPharma.git
 cd PristinoPharma
 ````
 
