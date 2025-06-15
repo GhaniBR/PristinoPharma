@@ -56,7 +56,7 @@ function About_us() {
           </div>
           
           <button className="px-6 py-3 bg-orange-100 text-orange-700 border border-orange-300 rounded-full font-medium transition-all duration-300 hover:bg-orange-200 hover:scale-105 hover:shadow-lg">
-            Leadership Team
+            <Team/>
           </button>
         </div>
       </header>
