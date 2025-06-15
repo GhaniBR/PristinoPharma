@@ -75,11 +75,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Navigation */}
-
       {/* Hero Section */}
-      <section id="home" className="pt-16 min-h-screen flex items-center">
+      <section id="home" className="min-h-screen flex items-center">
         <div className="w-full bg-gradient-to-br from-pink-100 via-purple-50 to-orange-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
