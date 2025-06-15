@@ -8,6 +8,7 @@ import AllJobsPage from "./components/AllJobPostings";
 import Footer from "./components/Footer";
 import Blog from "./components/Blogs";
 import ArticlePage from "./components/ArticlePage";
+import About from "./components/About";
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blog />} />
+        <Route path="/about" element={<About />} />
         <Route path="/article" element={<ArticlePage />} />
         <Route path="/careers" element={<CareerPage />} />
         <Route path="/all-jobs" element={<AllJobsPage />} />
