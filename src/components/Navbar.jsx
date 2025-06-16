@@ -13,7 +13,7 @@ export default function Navbar() {
   const navLinkClass = (path) =>
     `${
       isActive(path) ? "text-pink-700" : "text-gray-600"
-    } hover:text-pink-800 font-medium transition-colors`;
+    } hover:text-pink-800 font-2xl transition-colors`;
 
   return (
     <div className="relative z-50">
@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src={logo} alt="Logo" className="w-36 h-20 object-contain" />
+            <img src={logo} alt="Logo" className="w-36 h-15 object-contain" />
           </div>
 
           {/* Hamburger Icon */}

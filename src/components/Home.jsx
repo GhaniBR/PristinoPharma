@@ -222,7 +222,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Expertise Section */}
+      {/* Expertise Section 
       <section id="qvd" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -290,6 +290,75 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>*/}
+
+      {/*New Expertise*/}
+      <section id="qvd" className="py-20 bg-gray-50">
+        <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              OUR EXPERTISE
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              {[
+                {
+                  title: "Patient Care",
+                  description:
+                    "Leveraging technology to enhance patient outcomes, we build intuitive platforms for medication management, remote care, and health data accessibility. Our solutions prioritize user experience and personalized engagement in every interaction. ",
+                  image:
+                    "https://th.bing.com/th/id/R.3c8e74e5872fce84d9025a805f513a5a?rik=eOVo4u8q%2fW0fQA&riu=http%3a%2f%2fwww.blogsnow.com%2fwp-content%2fuploads%2f2016%2f09%2fPatient-Care.jpg&ehk=i0HfEdt9ulUh03%2fB47ku7%2b2k08HbKX7BtnFl9sZRwkE%3d&risl=1&pid=ImgRaw&r=0",
+                },
+                {
+                  title: "Quality Assurance",
+                  description:
+                    "We ensure the highest standards in software validation, compliance, and regulatory adherence for pharmaceutical solutions. Our QA processes are designed to deliver reliable, audit-ready systems that support patient safety and data integrity.",
+                  image:
+                    "https://eudaico.com/wp-content/uploads/2023/07/quality-assurance-pharmaceutical-supply-chain.png",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="w-full min-h-[350px] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl group relative transition-all duration-300"
+                >
+                  {/* Image Container */}
+                  <div className="relative h-full">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-all duration-300"
+                    />
+
+                    {/* Very Subtle Black Overlay on Hover */}
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                  </div>
+
+                  {/* Default State: White Background with Title */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-white p-4 transform transition-all duration-300 group-hover:opacity-0">
+                    <h3 className="text-lg font-bold text-black">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-gray-700 mt-1 line-clamp-2">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  {/* Hover State: No Background, Full Text */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    {/* Very subtle gradient only at bottom for text readability */}
+                    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300"></div>
+
+                    <h3 className="text-lg font-bold text-white relative z-10 shadow-text">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-white relative z-10 mt-1 shadow-text">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

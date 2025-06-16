@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Blog from "./components/Blogs";
 import ArticlePage from "./components/ArticlePage";
 import About from "./components/About";
+import Team from "./components/Team";
 function App() {
   return (
     <Router>
