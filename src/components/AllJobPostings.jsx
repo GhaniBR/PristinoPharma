@@ -194,6 +194,7 @@ const AllJobsPage = () => {
 
   const handleJobClick = (jobId) => {
     navigate(`/jobs/${jobId}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleGoBack = () => {

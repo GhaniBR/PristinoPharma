@@ -59,6 +59,7 @@ const CareerPage = () => {
   const handleJobClick = (jobId) => {
     // Navigate to job detail page with job ID as URL parameter
     navigate(`/jobs/${jobId}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
